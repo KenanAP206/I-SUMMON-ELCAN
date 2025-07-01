@@ -1,9 +1,11 @@
 "use client"
 
 import { useState, useEffect } from "react"
+import { useNavigate } from "react-router-dom"
 import { ChevronDown, Grid3X3, List, Users, Bed, Wifi, ChevronRight, ArrowLeft } from "lucide-react"
 
 export default function RoomsPage({ searchParams, onBackToHome }) {
+  const navigate = useNavigate()
   const [viewMode, setViewMode] = useState("grid")
   const [sortBy, setSortBy] = useState("best-selling")
   const [currentPage, setCurrentPage] = useState(1)
@@ -432,6 +434,7 @@ export default function RoomsPage({ searchParams, onBackToHome }) {
 
                 {/* Book Now Button */}
                 <button
+                  onClick={() => navigate(`/rooms/${room.id}`)}
                   className={`w-full font-semibold py-4 rounded-xl transition-all duration-300 text-base tracking-wide ${
                     room.available
                       ? "bg-gray-900 hover:bg-gray-800 text-white hover:scale-105"

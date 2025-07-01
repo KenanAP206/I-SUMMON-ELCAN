@@ -1,0 +1,14 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "test@example.com",
+      "password": "$2b$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi",
+      "name": "Test User",
+      "verified": true
+    }
+  ],
+  "verificationCodes": {
+    "test@example.com": "123456"
+  }
+}

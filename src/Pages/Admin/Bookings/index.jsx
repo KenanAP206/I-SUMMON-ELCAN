@@ -1,5 +1,5 @@
 "use client"
-
+import { NavLink } from "react-router-dom"
 import { useState } from "react"
 import {
   Calendar,
@@ -166,7 +166,9 @@ export default function AdminBookings() {
         </div>
         <button className="bg-amber-600 hover:bg-amber-700 text-white px-4 py-2 rounded-lg flex items-center space-x-2 transition-colors">
           <Plus className="w-4 h-4" />
-          <span>New Booking</span>
+          <NavLink to="/admin/bookings/add">
+            <span>New Booking</span>
+          </NavLink>
         </button>
       </div>
 

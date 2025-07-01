@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import { MoreVertical, Edit, Trash2, FileText, Search, Filter, Download, Plus } from "lucide-react"
+import { NavLink } from "react-router-dom"
 
 export default function AdminUserList() {
   const [searchTerm, setSearchTerm] = useState("")
@@ -126,7 +127,9 @@ export default function AdminUserList() {
           </button>
           <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg flex items-center space-x-2 transition-colors">
             <Plus className="w-4 h-4" />
-            <span>Add Booking</span>
+            <NavLink to="/admin/user-list/add">
+              <span>Add User</span>
+            </NavLink>
           </button>
           <button className="p-2 text-slate-400 hover:text-white hover:bg-slate-700 rounded-lg transition-colors">
             <MoreVertical className="w-5 h-5" />

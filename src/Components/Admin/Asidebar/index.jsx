@@ -44,7 +44,7 @@ export default function AdminSidebar({ isCollapsed = false }) {
     { key: "booking", label: "Booking", icon: Calendar, to: "/admin/bookings" },
     { key: "rooms", label: "Rooms", icon: Bed, to: "/admin/rooms" },
     { key: "user-list", label: "User List", icon: UserCheck, to: "/admin/user-list" },
-    { key: "staff", label: "Staff", icon: UserCheck, to: "/admin/staff" },
+
   ]
 
   const appsMenuItems = [
@@ -129,7 +129,9 @@ export default function AdminSidebar({ isCollapsed = false }) {
                   >
                     <div className="flex items-center space-x-3">
                       <item.icon className="w-4 h-4" />
-                      <span className="text-sm font-medium">Add {item.label}</span>
+                      <NavLink to={item.to}>
+                        <span className="text-sm font-medium">{item.label}</span>
+                      </NavLink>
                     </div>
                   </button>
                 </div>

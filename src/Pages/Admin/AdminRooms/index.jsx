@@ -1,5 +1,5 @@
 "use client"
-
+import { NavLink } from "react-router-dom"
 import { useState } from "react"
 import {
   Search,
@@ -226,7 +226,9 @@ export default function AdminRooms() {
               <Filter className="w-5 h-5" />
             </button>
             <button className="p-2 text-slate-400 hover:text-white hover:bg-slate-700 rounded-lg transition-colors">
-              <Plus className="w-5 h-5" />
+            <NavLink to="/admin/rooms/add">
+            <Plus className="w-5 h-5" />
+            </NavLink>
             </button>
             <button className="p-2 text-slate-400 hover:text-white hover:bg-slate-700 rounded-lg transition-colors">
               <RefreshCw className="w-5 h-5" />

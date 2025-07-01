@@ -2,7 +2,7 @@ import { ChevronDown, Phone } from "lucide-react"
 import { NavLink } from "react-router-dom"
 export default function Navbar() {
   return (
-    <nav className="absolute top-0 left-0 right-0 z-50 px-8 py-6">
+    <nav className="bg-black/30 absolute top-0 left-0 right-0 z-50 px-8 py-6">
       <div className="flex items-center justify-between max-w-7xl mx-auto">
         {/* Logo */}
         <NavLink to="/">
